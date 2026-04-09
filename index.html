@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CampusConnect — Event Discovery & Participation Tracker</title>
+  <meta name="description" content="Discover, register, and track campus events — workshops, hackathons, seminars, and guest lectures all in one place." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ===================== NAVBAR ===================== -->
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo">
+      <div class="logo-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      </div>
+      <span>CampusConnect</span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="nav-link active">Home</a></li>
+      <li><a href="events.html" class="nav-link">Events</a></li>
+      <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+      <li><a href="attendance.html" class="nav-link">Attendance</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="btn-icon" id="notifBtn" title="Notifications">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+        <span class="notif-dot"></span>
+      </button>
+      <a href="login.html" class="btn-login">Login</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero" id="hero">
+  <div class="hero-bg-circles">
+    <div class="circle c1"></div>
+    <div class="circle c2"></div>
+    <div class="circle c3"></div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-badge">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      Your Campus, Your Events
+    </div>
+    <h1 class="hero-title">Never Miss a Campus <span class="gradient-text">Event Again</span></h1>
+    <p class="hero-subtitle">Discover workshops, hackathons, seminars & guest lectures — all in one place. Register, attend, and track your participation with ease.</p>
+
+    <div class="hero-search">
+      <div class="search-box">
+        <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" placeholder="Search events, workshops, seminars..." id="heroSearch" class="search-input" />
+        <button class="btn-search" onclick="window.location.href='events.html'">Search</button>
+      </div>
+      <div class="search-tags">
+        <span class="tag" onclick="window.location.href='events.html?cat=hackathon'">🏆 Hackathon</span>
+        <span class="tag" onclick="window.location.href='events.html?cat=workshop'">🛠️ Workshop</span>
+        <span class="tag" onclick="window.location.href='events.html?cat=seminar'">🎤 Seminar</span>
+        <span class="tag" onclick="window.location.href='events.html?cat=lecture'">📚 Lecture</span>
+      </div>
+    </div>
+
+    <div class="hero-stats">
+      <div class="stat-item">
+        <span class="stat-num">240+</span>
+        <span class="stat-label">Events This Semester</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-num">5,800+</span>
+        <span class="stat-label">Students Registered</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-num">30+</span>
+        <span class="stat-label">Clubs & Departments</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-visual">
+    <div class="event-preview-card main-card">
+      <div class="epc-header">
+        <span class="epc-badge hackathon">Hackathon</span>
+        <span class="epc-live">● LIVE</span>
+      </div>
+      <h3>National Level Code Sprint 2026</h3>
+      <p>April 15 – 16, 2026 · Auditorium A</p>
+      <div class="epc-footer">
+        <div class="epc-avatars">
+          <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Felix" alt="avatar" />
+          <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Aneka" alt="avatar" />
+          <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Sara" alt="avatar" />
+          <span>+48 joined</span>
+        </div>
+        <button class="btn-sm" onclick="window.location.href='event-detail.html'">Register →</button>
+      </div>
+    </div>
+    <div class="event-preview-card side-card top-card">
+      <div class="epc-badge workshop">Workshop</div>
+      <p class="side-title">React.js Bootcamp</p>
+      <span class="side-date">Apr 12 · CS Lab 3</span>
+    </div>
+    <div class="event-preview-card side-card bottom-card">
+      <div class="epc-badge seminar">Seminar</div>
+      <p class="side-title">Entrepreneurship Talk</p>
+      <span class="side-date">Apr 18 · Room 201</span>
+    </div>
+    <div class="floating-notif">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+      <span>Reminder: Code Sprint starts in 2 days!</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CATEGORIES ===================== -->
+<section class="categories-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Browse by Category</h2>
+      <p>Find events that match your interests and goals</p>
+    </div>
+    <div class="categories-grid">
+      <a href="events.html?cat=hackathon" class="cat-card hackathon-cat">
+        <div class="cat-icon">🏆</div>
+        <h3>Hackathons</h3>
+        <p>12 upcoming</p>
+      </a>
+      <a href="events.html?cat=workshop" class="cat-card workshop-cat">
+        <div class="cat-icon">🛠️</div>
+        <h3>Workshops</h3>
+        <p>28 upcoming</p>
+      </a>
+      <a href="events.html?cat=seminar" class="cat-card seminar-cat">
+        <div class="cat-icon">🎤</div>
+        <h3>Seminars</h3>
+        <p>9 upcoming</p>
+      </a>
+      <a href="events.html?cat=lecture" class="cat-card lecture-cat">
+        <div class="cat-icon">📚</div>
+        <h3>Guest Lectures</h3>
+        <p>15 upcoming</p>
+      </a>
+      <a href="events.html?cat=cultural" class="cat-card cultural-cat">
+        <div class="cat-icon">🎭</div>
+        <h3>Cultural</h3>
+        <p>7 upcoming</p>
+      </a>
+      <a href="events.html?cat=sports" class="cat-card sports-cat">
+        <div class="cat-icon">⚽</div>
+        <h3>Sports</h3>
+        <p>11 upcoming</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FEATURED EVENTS ===================== -->
+<section class="featured-section">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <h2>Featured Events</h2>
+        <p>Handpicked highlights for this week</p>
+      </div>
+      <a href="events.html" class="btn-outline">View All Events →</a>
+    </div>
+
+    <div class="featured-grid">
+      <!-- Featured Card 1 -->
+      <div class="event-card featured-card" onclick="window.location.href='event-detail.html'">
+        <div class="event-card-img hackathon-img">
+          <span class="card-badge hackathon">Hackathon</span>
+          <span class="card-save" title="Save event">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+          </span>
+          <div class="event-date-badge"><span>15</span><span>APR</span></div>
+        </div>
+        <div class="event-card-body">
+          <h3 class="event-card-title">National Level Code Sprint 2026</h3>
+          <div class="event-meta">
+            <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> April 15–16, 9:00 AM</span>
+            <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Auditorium A</span>
+          </div>
+          <p class="event-desc">India's biggest college-level hackathon. Build innovative solutions in 24 hours. ₹50,000 in prizes!</p>
+          <div class="event-card-footer">
+            <div class="event-seats"><span class="seats-filled" style="width:75%"></span><span>75% filled</span></div>
+            <button class="btn-register" onclick="event.stopPropagation();">Register</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Featured Card 2 -->
+      <div class="event-card" onclick="window.location.href='event-detail.html'">
+        <div class="event-card-img workshop-img">
+          <span class="card-badge workshop">Workshop</span>
+          <span class="card-save" title="Save event">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+          </span>
+          <div class="event-date-badge"><span>12</span><span>APR</span></div>
+        </div>
+        <div class="event-card-body">
+          <h3 class="event-card-title">Full-Stack React.js Bootcamp</h3>
+          <div class="event-meta">
+            <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> April 12, 10:00 AM</span>
+            <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> CS Lab 3</span>
+          </div>
+          <p class="event-desc">Hands-on session covering modern React, hooks, API integration, and deployment to production.</p>
+          <div class="event-card-footer">
+            <div class="event-seats"><span class="seats-filled" style="width:45%"></span><span>45% filled</span></div>
+            <button class="btn-register" onclick="event.stopPropagation();">Register</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Featured Card 3 -->
+      <div class="event-card" onclick="window.location.href='event-detail.html'">
+        <div class="event-card-img seminar-img">
+          <span class="card-badge seminar">Seminar</span>
+          <span class="card-save" title="Save event">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+          </span>
+          <div class="event-date-badge"><span>18</span><span>APR</span></div>
+        </div>
+        <div class="event-card-body">
+          <h3 class="event-card-title">Entrepreneurship in the Digital Age</h3>
+          <div class="event-meta">
+            <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> April 18, 2:00 PM</span>
+            <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Seminar Hall B</span>
+          </div>
+          <p class="event-desc">Join startup founders and angel investors for an insightful talk on building ventures as a student.</p>
+          <div class="event-card-footer">
+            <div class="event-seats"><span class="seats-filled" style="width:60%"></span><span>60% filled</span></div>
+            <button class="btn-register" onclick="event.stopPropagation();">Register</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== RECOMMENDED FOR YOU ===================== -->
+<section class="featured-section" style="background: var(--surface-3); padding: 60px 0;">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <h2>Recommended for You</h2>
+        <p>Curated events based on your interests in Tech & Entrepreneurship</p>
+      </div>
+    </div>
+
+    <div class="featured-grid">
+      <!-- Rec Card 1 -->
+      <div class="event-card" onclick="window.location.href='event-detail.html'">
+        <div class="event-card-img lecture-img">
+          <span class="card-badge lecture">Lecture</span>
+          <span class="card-save" title="Save event">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+          </span>
+          <div class="event-date-badge"><span>22</span><span>APR</span></div>
+        </div>
+        <div class="event-card-body">
+          <h3 class="event-card-title">AI & Ethics in Modern Tech</h3>
+          <div class="event-meta">
+            <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> April 22, 11:00 AM</span>
+          </div>
+          <p class="event-desc">An deep dive into the ethical considerations of building large language models.</p>
+          <div class="event-card-footer">
+            <button class="btn-sm-outline" style="width:100%" onclick="event.stopPropagation(); window.location.href='event-detail.html'">View Details</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Rec Card 2 -->
+      <div class="event-card" onclick="window.location.href='event-detail.html'">
+        <div class="event-card-img workshop-img">
+          <span class="card-badge workshop">Workshop</span>
+          <span class="card-save" title="Save event">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+          </span>
+          <div class="event-date-badge"><span>25</span><span>APR</span></div>
+        </div>
+        <div class="event-card-body">
+          <h3 class="event-card-title">Cloud Architecture 101</h3>
+          <div class="event-meta">
+            <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> April 25, 3:00 PM</span>
+          </div>
+          <p class="event-desc">Learn how to build scalable serverless applications using AWS.</p>
+          <div class="event-card-footer">
+            <button class="btn-sm-outline" style="width:100%" onclick="event.stopPropagation(); window.location.href='event-detail.html'">View Details</button>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Rec Card 3 -->
+      <div class="event-card" onclick="window.location.href='event-detail.html'">
+        <div class="event-card-img hackathon-img">
+          <span class="card-badge hackathon">Mini-Hack</span>
+          <span class="card-save" title="Save event">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+          </span>
+          <div class="event-date-badge"><span>28</span><span>APR</span></div>
+        </div>
+        <div class="event-card-body">
+          <h3 class="event-card-title">Frontend Speed Build</h3>
+          <div class="event-meta">
+            <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> April 28, 10:00 AM</span>
+          </div>
+          <p class="event-desc">A 4-hour sprint to build the best UI. Win prizes and get feedback.</p>
+          <div class="event-card-footer">
+            <button class="btn-sm-outline" style="width:100%" onclick="event.stopPropagation(); window.location.href='event-detail.html'">View Details</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== UPCOMING EVENTS ===================== -->
+<section class="upcoming-section">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <h2>Upcoming This Week</h2>
+        <p>Don't miss out on what's happening around campus</p>
+      </div>
+      <a href="events.html" class="btn-outline">See Full Calendar →</a>
+    </div>
+
+    <div class="upcoming-list">
+      <div class="upcoming-item" onclick="window.location.href='event-detail.html'">
+        <div class="upcoming-date">
+          <span class="udate-day">12</span>
+          <span class="udate-mon">APR</span>
+        </div>
+        <div class="upcoming-info">
+          <div class="upcoming-top">
+            <h4>Full-Stack React.js Bootcamp</h4>
+            <span class="badge workshop">Workshop</span>
+          </div>
+          <div class="upcoming-meta">
+            <span>🕙 10:00 AM – 1:00 PM</span>
+            <span>📍 CS Lab 3, Block B</span>
+            <span>👤 Organized by: CSE Dept.</span>
+          </div>
+        </div>
+        <div class="upcoming-action">
+          <span class="seats-left">12 seats left</span>
+          <button class="btn-sm-outline" onclick="event.stopPropagation(); window.location.href='event-detail.html'">View →</button>
+        </div>
+      </div>
+
+      <div class="upcoming-item" onclick="window.location.href='event-detail.html'">
+        <div class="upcoming-date">
+          <span class="udate-day">14</span>
+          <span class="udate-mon">APR</span>
+        </div>
+        <div class="upcoming-info">
+          <div class="upcoming-top">
+            <h4>AI & Machine Learning Guest Lecture</h4>
+            <span class="badge lecture">Lecture</span>
+          </div>
+          <div class="upcoming-meta">
+            <span>🕙 11:00 AM – 12:30 PM</span>
+            <span>📍 Auditorium B</span>
+            <span>👤 Speaker: Dr. Rajesh Kumar, IIT Bombay</span>
+          </div>
+        </div>
+        <div class="upcoming-action">
+          <span class="seats-left open">Open</span>
+          <button class="btn-sm-outline" onclick="event.stopPropagation(); window.location.href='event-detail.html'">View →</button>
+        </div>
+      </div>
+
+      <div class="upcoming-item" onclick="window.location.href='event-detail.html'">
+        <div class="upcoming-date today-badge">
+          <span class="udate-day">15</span>
+          <span class="udate-mon">APR</span>
+          <span class="today-lbl">TODAY</span>
+        </div>
+        <div class="upcoming-info">
+          <div class="upcoming-top">
+            <h4>National Level Code Sprint 2026</h4>
+            <span class="badge hackathon">Hackathon</span>
+          </div>
+          <div class="upcoming-meta">
+            <span>🕙 9:00 AM – 9:00 AM (Next Day)</span>
+            <span>📍 Auditorium A + Labs</span>
+            <span>👤 Organized by: GDSC & ACM</span>
+          </div>
+        </div>
+        <div class="upcoming-action">
+          <span class="seats-left urgent">Last 5!</span>
+          <button class="btn-sm-outline" onclick="event.stopPropagation(); window.location.href='event-detail.html'">View →</button>
+        </div>
+      </div>
+
+      <div class="upcoming-item" onclick="window.location.href='event-detail.html'">
+        <div class="upcoming-date">
+          <span class="udate-day">18</span>
+          <span class="udate-mon">APR</span>
+        </div>
+        <div class="upcoming-info">
+          <div class="upcoming-top">
+            <h4>Entrepreneurship in the Digital Age</h4>
+            <span class="badge seminar">Seminar</span>
+          </div>
+          <div class="upcoming-meta">
+            <span>🕙 2:00 PM – 4:00 PM</span>
+            <span>📍 Seminar Hall B</span>
+            <span>👤 Guest: Priya Mehta, Founder – EdTech Co.</span>
+          </div>
+        </div>
+        <div class="upcoming-action">
+          <span class="seats-left open">Open</span>
+          <button class="btn-sm-outline" onclick="event.stopPropagation(); window.location.href='event-detail.html'">View →</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== HOW IT WORKS ===================== -->
+<section class="how-section">
+  <div class="container">
+    <div class="section-header center">
+      <h2>How CampusConnect Works</h2>
+      <p>From discovery to participation — seamlessly</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-num">01</div>
+        <div class="step-icon">🔍</div>
+        <h3>Discover Events</h3>
+        <p>Browse or search campus events by category, date, or department. Get personalized recommendations.</p>
+      </div>
+      <div class="step-arrow">→</div>
+      <div class="step-card">
+        <div class="step-num">02</div>
+        <div class="step-icon">✅</div>
+        <h3>Register Instantly</h3>
+        <p>One-click registration with your college ID. Add events to your calendar with a single tap.</p>
+      </div>
+      <div class="step-arrow">→</div>
+      <div class="step-card">
+        <div class="step-num">03</div>
+        <div class="step-icon">📱</div>
+        <h3>Attend via QR</h3>
+        <p>Show your unique QR code at the venue for instant check-in. No queues, no paperwork.</p>
+      </div>
+      <div class="step-arrow">→</div>
+      <div class="step-card">
+        <div class="step-num">04</div>
+        <div class="step-icon">🏅</div>
+        <h3>Track & Earn</h3>
+        <p>View your participation history, download certificates, and build your campus portfolio.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CTA ===================== -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-card">
+      <div class="cta-content">
+        <h2>Ready to get started?</h2>
+        <p>Join 5,800+ students already tracking their campus journey with CampusConnect.</p>
+        <div class="cta-actions">
+          <a href="events.html" class="btn-primary">Explore Events</a>
+          <a href="login.html" class="btn-ghost">Create Account →</a>
+        </div>
+      </div>
+      <div class="cta-visual">
+        <div class="cta-stat-card">
+          <span class="cta-stat-icon">🎓</span>
+          <div>
+            <strong>Certificate Earned!</strong>
+            <p>React.js Bootcamp · Apr 2026</p>
+          </div>
+        </div>
+        <div class="cta-stat-card">
+          <span class="cta-stat-icon">🏆</span>
+          <div>
+            <strong>Award Winner!</strong>
+            <p>Code Sprint 2026 – 2nd Place</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="nav-logo" style="margin-bottom:12px">
+          <div class="logo-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+          <span>CampusConnect</span>
+        </div>
+        <p>Your campus event hub — discover, register, attend, and track all in one place.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Platform</h4>
+        <ul>
+          <li><a href="events.html">Browse Events</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="attendance.html">Attendance</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>For Organizers</h4>
+        <ul>
+          <li><a href="#">Post Event</a></li>
+          <li><a href="#">Analytics</a></li>
+          <li><a href="#">Certificates</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 CampusConnect. Built for college students, by college students.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
